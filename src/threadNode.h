@@ -1,1 +1,5 @@
-Режим вывода команд на экран (ECHO) включен.
+#include "Node.h" 
+class threadNode{
+     private:
+        std::vector<Node> nodes;   
+};

@@ -1,1 +1,5 @@
-Режим вывода команд на экран (ECHO) включен.
+#include "threadNode.h"
+class controlThreadPanel{
+     private:
+        std::vector<threadNode> threadNodes; 
+};
