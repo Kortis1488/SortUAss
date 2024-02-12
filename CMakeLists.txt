@@ -18,6 +18,12 @@ find_package (Boost REQUIRED COMPONENTS filesystem REQUIRED)
 # Если библиотека найдена, то
 if (Boost_FOUND)
     include_directories (SYSTEM ${Boost_INCLUDE_DIR}) # подключаем заголовочные файлы
-    add_executable (Sort "src/main.cpp" "src/Node.cpp" "src/scanner.cpp") # Создаем исполняемый файл для нашего проекта
+    add_executable (Sort 
+                        "src/origin/main.cpp" 
+                        "src/origin/Node.cpp" 
+                        "src/origin/scanner.cpp"
+                        "src/origin/nameChecker.cpp"
+                    ) 
+
     target_link_libraries (Sort ${Boost_LIBRARIES}) # подключаем библиотеку
 endif ()

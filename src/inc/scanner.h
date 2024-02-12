@@ -4,6 +4,8 @@
 namespace fsb = boost::filesystem;
 
 class Scanner{
+    private:
+        std::vector<fsb::path> files;
     public:
-        void scanArea(std::vector<fsb::path>* files, fsb::path* dir);
+        void scanArea(fsb::path* dir, std::vector<fsb::path>* files);
 };

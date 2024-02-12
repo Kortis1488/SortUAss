@@ -1,0 +1,145 @@
+<mxfile host="Electron" modified="2024-01-15T23:26:10.069Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.4.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="xunvmUAcNJovPqJDCknw" version="21.4.0" type="device">
+  <diagram name="Страница 1" id="xLR_GRwJ8_kqiWAvKu-O">
+    <mxGraphModel dx="2501" dy="2013" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f8zCI2N-QhA7lcZUFDBX-1" value="&lt;h1&gt;Sortable&lt;/h1&gt;&lt;p&gt;Программа контролирует в реальном времени каждый узел позволяя просто скидывать файлы в корневой узел (самая верхняя папка в списке), после чего файлы отсортируются в соотвествии с указанными вами правилами на каждом из узлов&lt;br&gt;&lt;br&gt;Алгоритм работы:&lt;br&gt;1) Создаётся тред из папок внутри программы&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;2) В каждой папке создаётся файл с расширением .srt в котором указаны правила сортировки для данного узла (папки)&lt;br&gt;3) Каждый файл будет перемещён в другие папки в соответвии с правилами сортировки на каждом узле&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="60" y="-10" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-7" value="pneumaticMail" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="150" y="380" width="210" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-8" value="Рапоряжается всеми данными.&lt;br&gt;Отвечает за:&lt;br&gt;1) Передачу node из tNM на:&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;1. legislator для записи правил&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2. logisticManager для &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;сортировки&lt;br&gt;2) Вызов методов вышеперечисленных классов" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="Ae36oYjQsDvG9bEkst2z-7" vertex="1">
+          <mxGeometry y="30" width="210" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="f8zCI2N-QhA7lcZUFDBX-3" value="Node" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="572.5" y="840" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="f8zCI2N-QhA7lcZUFDBX-4" value="Класс Node содержит информацию о содержимом папки, а также правила сортировки" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="f8zCI2N-QhA7lcZUFDBX-3" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-21" value="threadNode" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="572.5" y="680" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-22" value="Класс threadNode содержит треды из нодов" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="Ae36oYjQsDvG9bEkst2z-21" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-28" value="threadNodeManager" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="578" y="507" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-29" value="Содержит все треды.&lt;br&gt;Удалят, создаёт и передаёт." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="Ae36oYjQsDvG9bEkst2z-28" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-54" value="scanner" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="880" y="840" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-55" value="Класс добывает информацию о файлах и директории" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="Ae36oYjQsDvG9bEkst2z-54" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-56" value="loader" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-80" y="840" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ae36oYjQsDvG9bEkst2z-57" value="Класс перемещающий файлы в директории, передаваемые ему lM" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="Ae36oYjQsDvG9bEkst2z-56" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yvO1TgBMwFcLco1oo4gx-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.469;exitY=-0.018;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.474;entryY=1.025;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="f8zCI2N-QhA7lcZUFDBX-3" target="Ae36oYjQsDvG9bEkst2z-22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="688" y="862" as="sourcePoint" />
+            <mxPoint x="738" y="812" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yvO1TgBMwFcLco1oo4gx-10" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.474;entryY=0.988;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="Ae36oYjQsDvG9bEkst2z-21" target="Ae36oYjQsDvG9bEkst2z-29" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="688" y="862" as="sourcePoint" />
+            <mxPoint x="738" y="812" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yvO1TgBMwFcLco1oo4gx-18" value="legislator" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="275" y="672" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="yvO1TgBMwFcLco1oo4gx-19" value="Этот класс записывает передаваемые ему правила сортировки в Node" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="yvO1TgBMwFcLco1oo4gx-18" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="yvO1TgBMwFcLco1oo4gx-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.676;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.002;exitY=0.425;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="f8zCI2N-QhA7lcZUFDBX-4" target="yvO1TgBMwFcLco1oo4gx-19" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="1040" as="sourcePoint" />
+            <mxPoint x="685" y="692" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="417" y="904" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.014;exitY=0.363;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.99;entryY=0.816;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Ae36oYjQsDvG9bEkst2z-29" target="Ae36oYjQsDvG9bEkst2z-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="620" as="sourcePoint" />
+            <mxPoint x="430" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-2" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.362;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="y74-tOYPXn2dpRUT9Z1G-4" target="Ae36oYjQsDvG9bEkst2z-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="650" as="sourcePoint" />
+            <mxPoint x="430" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="25" y="640" />
+              <mxPoint x="226" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.619;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="yvO1TgBMwFcLco1oo4gx-18" target="Ae36oYjQsDvG9bEkst2z-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="620" as="sourcePoint" />
+            <mxPoint x="430" y="570" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="640" />
+              <mxPoint x="280" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-4" value="logisticsManager" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-80" y="700" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-5" value="Класс сортирующий фалйы читая Node" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="y74-tOYPXn2dpRUT9Z1G-4" vertex="1">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-7" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.002;exitY=0.863;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="f8zCI2N-QhA7lcZUFDBX-4" target="y74-tOYPXn2dpRUT9Z1G-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="820" as="sourcePoint" />
+            <mxPoint x="180" y="770" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="940" />
+              <mxPoint x="200" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y74-tOYPXn2dpRUT9Z1G-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Ae36oYjQsDvG9bEkst2z-55" target="f8zCI2N-QhA7lcZUFDBX-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="820" as="sourcePoint" />
+            <mxPoint x="180" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JZ6QnTnW_2VzQiKZh7D5-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Ae36oYjQsDvG9bEkst2z-56" target="y74-tOYPXn2dpRUT9Z1G-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="810" as="sourcePoint" />
+            <mxPoint x="490" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JZ6QnTnW_2VzQiKZh7D5-3" value="controlPanel" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="300" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="JZ6QnTnW_2VzQiKZh7D5-4" value="Содержит методы по работе с системой сортировки&lt;br&gt;Класс через который ведётся вся работа" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="JZ6QnTnW_2VzQiKZh7D5-3">
+          <mxGeometry y="30" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JZ6QnTnW_2VzQiKZh7D5-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.014;exitY=0.375;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.424;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="JZ6QnTnW_2VzQiKZh7D5-4" target="Ae36oYjQsDvG9bEkst2z-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="420" as="sourcePoint" />
+            <mxPoint x="240" y="360" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="239" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
