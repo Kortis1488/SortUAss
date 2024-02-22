@@ -1,6 +1,6 @@
 #include <iostream>
 #include <boost/filesystem/operations.hpp>
-#include "../inc/Node.h"
+#include "../inc/controlPanel.h"
 
 namespace fsb = boost::filesystem;
 using namespace std;
@@ -8,12 +8,9 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     string path = "Z:\\Desktop\\test";
-    Node node(path);
+    controlPanel cP;
     
-    for(;;){
-    cout<<endl;
-    cin >> path;
-    }
+
     return 0;
 }
 

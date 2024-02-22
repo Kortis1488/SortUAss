@@ -22,7 +22,10 @@ if (Boost_FOUND)
                         "src/origin/main.cpp" 
                         "src/origin/Node.cpp" 
                         "src/origin/scanner.cpp"
-                        "src/origin/nameChecker.cpp"
+                        "src/origin/blockRunner.cpp"
+                        "src/origin/controlPanel.cpp"
+                        "src/origin/threadNode.cpp"
+                        "src/origin/threadNodeManager.cpp"
                     ) 
 
     target_link_libraries (Sort ${Boost_LIBRARIES}) # подключаем библиотеку

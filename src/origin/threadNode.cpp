@@ -1,11 +1,13 @@
 #include "../inc/threadNode.h"
 
-//namespace th = threadNode;
+using tn = threadNode;
 
-bool threadNode::createNode(std::string pathS){
-    
+tn::threadNode(std::string path){
+    createNode(path);
+}
+
+bool tn::createNode(std::string pathS){
     bool isDir = false;
-    
     fsb::path *path = new fsb::path(pathS);
     if(fsb::exists(*path)&&fsb::is_directory(*path)){
         nodes.push_back(pathS);
@@ -15,13 +17,22 @@ bool threadNode::createNode(std::string pathS){
 
     return isDir;
 }
-bool threadNode::deleteNode(std::string path){
+
+bool tn::haveOnlyOneElement(){
+    if(nodes.size()==1) return false;
+    return true;
+}
+
+bool tn::deleteNode(std::string path){
     return false;
 }
-std::vector<Node>& threadNode::getThread(){
+
+
+std::vector<Node>& tn::getThread(){
     return nodes;
 }
-Node threadNode::getNode(std::string path){
+
+Node tn::getNode(std::string path){
     for (Node x : nodes){
         
     }

@@ -27,7 +27,7 @@ class Node{
         std::vector<rule> rules; // набор правил
         void fill(); // загрузка файлов
         bool checkAppendedRule(std::string dir, std::string ext); //проверка доб. правил
-        bool checkAvailabilityRule(string ext);//TODO
+        bool checkAvailabilityRule(std::string ext);//TODO
 
 
         //объекты-интрументы внешних классов для работы с информацией о файлах и правилами
