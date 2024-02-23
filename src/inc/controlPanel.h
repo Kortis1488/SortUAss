@@ -3,8 +3,13 @@
 class controlPanel{
     private:
         controlThreadPanel manager;
-        threadNodeCreator tNC;
+        blockRunnerData blockRD;
+        std::vector<blockRunner> blocks;
     public:
         controlPanel();
-        void createThreadNode(std::string path);
+
+        void setRule(std::vector<rule> *rules);
+        void setPath(fsb::path *dir);
+        
+        bool runBlock(blockRunnerType brt);
 };
