@@ -34,6 +34,6 @@ std::vector<Node>& tn::getThread(){
 
 Node tn::getNode(std::string path){
     for (Node x : nodes){
-        
+        if(x.getDir().generic_string() == path) return x;
     }
 }

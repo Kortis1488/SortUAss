@@ -8,9 +8,8 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     string path = "Z:\\Desktop\\test";
-    controlPanel cP;
-    
-
+    controlPanel cp;
+    cp.runBlock(blockRunnerType::THREAD_NODE_CREATOR);
     return 0;
 }
 
