@@ -6,13 +6,13 @@ enum class blockRunnerType{
 
 struct data{
     fsb::path* dir;
-    std::vector<rule>* rules;
+    std::vector<rule> * rules;
 };
 
 class blockRunnerData{
     public:
-        data dataBR;
-        void setData(fsb::path* dir,std::vector<rule>* rules);
+        static data dataBR;
+        static void setData(fsb::path* dir,std::vector<rule>* rules);
 };
 
 
@@ -42,5 +42,11 @@ class blockRunner{
 class threadNodeCreator: public blockRunner{
     public:
     threadNodeCreator(controlThreadPanel* manager);
+    void runBR() override;
+};
+
+class getNodeDir: public blockRunner{
+    public:
+    getNodeDir(controlThreadPanel* manager);
     void runBR() override;
 };

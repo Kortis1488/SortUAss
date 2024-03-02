@@ -35,7 +35,8 @@ class Node{
 
     public:
         //информация о ноде и его подконтрольных
-        Node(std::string pathName); 
+        Node(fsb::path *path); 
+        Node();
         fsb::path getDir(); //дать директорию которую отслеживает нод
         std::vector<fsb::path>& getFiles(); //дать набор файлов в данной дирректории
 

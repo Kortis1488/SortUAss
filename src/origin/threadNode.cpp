@@ -2,18 +2,17 @@
 
 using tn = threadNode;
 
-tn::threadNode(std::string path){
+tn::threadNode(fsb::path *path){
     createNode(path);
 }
 
-bool tn::createNode(std::string pathS){
+bool tn::createNode(fsb::path *path){
     bool isDir = false;
-    fsb::path *path = new fsb::path(pathS);
+    
     if(fsb::exists(*path)&&fsb::is_directory(*path)){
-        nodes.push_back(pathS);
+        nodes.push_back(Node(path));
         isDir = true;
     }
-    delete path;
 
     return isDir;
 }
@@ -23,7 +22,7 @@ bool tn::haveOnlyOneElement(){
     return true;
 }
 
-bool tn::deleteNode(std::string path){
+bool tn::deleteNode(fsb::path *path){
     return false;
 }
 
@@ -32,8 +31,8 @@ std::vector<Node>& tn::getThread(){
     return nodes;
 }
 
-Node tn::getNode(std::string path){
+Node tn::getNode(fsb::path *path){
     for (Node x : nodes){
-        if(x.getDir().generic_string() == path) return x;
+        if(x.getDir().generic_string() == *path) return x;
     }
 }

@@ -1,10 +1,14 @@
 #include "../inc/blockRunner.h"
 #include <iostream>
 using typeB = blockRunnerType;
+using dataB = blockRunnerData;
 void blockRunnerData::setData(fsb::path* dir,std::vector<rule>* rules){
     dataBR.dir = dir;
     dataBR.rules = rules; 
 }
+
+
+struct data blockRunnerData::dataBR = {nullptr, nullptr};
 
 
 blockRunner::blockRunner(blockRunnerType brt, controlThreadPanel* manager){
@@ -23,9 +27,12 @@ blockRunnerType blockRunner::getType(){
 }
 
 void blockRunner::runBR(){
-    
 }
 
 void threadNodeCreator:: runBR(){
-    std::cout<<"DONE\n";
+    manager->createThreadNode(dataB::dataBR.dir);
+}
+
+void getNodeDir:: runBR(){
+    std::vector<threadNode>* thd = manager->getThreadNodes();    
 }

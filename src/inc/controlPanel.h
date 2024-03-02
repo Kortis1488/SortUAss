@@ -9,14 +9,10 @@ class controlManager{
 
 class controlPanel{
     private:
-        std::vector<blockRunner> blocks;
+        std::vector<blockRunner*> blocks;
         controlManager cm;
     public:
-        
         controlPanel();
         bool runBlock(blockRunnerType brt);
-        
+        ~controlPanel();
 };
-
-
-

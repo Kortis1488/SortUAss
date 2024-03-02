@@ -9,6 +9,8 @@ int main(int argc, char* argv[])
 {
     string path = "Z:\\Desktop\\test";
     controlPanel cp;
+    fsb::path path1(path);
+    blockRunnerData::setData(&path1, nullptr);
     cp.runBlock(blockRunnerType::THREAD_NODE_CREATOR);
     return 0;
 }

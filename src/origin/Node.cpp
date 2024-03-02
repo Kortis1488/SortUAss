@@ -1,9 +1,8 @@
 #include "../inc/Node.h"
 
-Node::Node(std::string path){
-    dir.replace_filename(path);
+Node::Node(fsb::path *path){
+    dir = *path;
     fill();
-    
 }
 
 //возвращает набор файлов в данной дирректории

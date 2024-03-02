@@ -3,11 +3,11 @@ class threadNode{
      private:
         std::vector<Node> nodes;
      public:
-        threadNode(std::string path);
-        bool createNode(std::string path);
-        bool deleteNode(std::string path);
+        threadNode(fsb::path *path);
+        bool createNode(fsb::path *path);
+        bool deleteNode(fsb::path *path);
         std::vector<Node>& getThread();
-        Node getNode(std::string path);
+        Node getNode(fsb::path *path);
         bool haveOnlyOneElement();
 };
 
