@@ -1,18 +1,21 @@
 #include "threadNodeManager.h"
 
 enum class blockRunnerType{
-    THREAD_NODE_CREATOR
+    THREAD_NODE_CREATOR,
+    NODE_CREATOR
 };
 
-struct data{
+struct panelData{
     fsb::path* dir;
+    fsb::path* subBir;
     std::vector<rule> * rules;
 };
 
 class blockRunnerData{
     public:
-        static data dataBR;
+        static panelData dataBR;
         static void setData(fsb::path* dir,std::vector<rule>* rules);
+        static void setSubDir(fsb::path* subBir);
 };
 
 
@@ -33,20 +36,20 @@ class blockRunner{
 //         void runBR() override;
 // };
 
-// class nodeCreator: public blockRunner{
-//     using blockRunner::blockRunner;
-//     public:
-//         void runBR() override;
-// };
+class nodeCreator: public blockRunner{
+    public:
+        nodeCreator(controlThreadPanel* manager);
+        void runBR() override;
+};
 
 class threadNodeCreator: public blockRunner{
     public:
-    threadNodeCreator(controlThreadPanel* manager);
-    void runBR() override;
+        threadNodeCreator(controlThreadPanel* manager);
+        void runBR() override;
 };
 
 class getNodeDir: public blockRunner{
     public:
-    getNodeDir(controlThreadPanel* manager);
-    void runBR() override;
+        getNodeDir(controlThreadPanel* manager);
+        void runBR() override;
 };

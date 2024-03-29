@@ -6,10 +6,11 @@ void blockRunnerData::setData(fsb::path* dir,std::vector<rule>* rules){
     dataBR.dir = dir;
     dataBR.rules = rules; 
 }
+void blockRunnerData::setSubDir(fsb::path* subBir){
+    dataBR.subBir = subBir;
+}
 
-
-struct data blockRunnerData::dataBR = {nullptr, nullptr};
-
+struct panelData blockRunnerData::dataBR = {nullptr, nullptr, nullptr};
 
 blockRunner::blockRunner(blockRunnerType brt, controlThreadPanel* manager){
     this->brt = brt;
@@ -18,6 +19,10 @@ blockRunner::blockRunner(blockRunnerType brt, controlThreadPanel* manager){
 
 threadNodeCreator::threadNodeCreator(controlThreadPanel* manager)
 :blockRunner(typeB::THREAD_NODE_CREATOR, manager)
+{
+}
+nodeCreator::nodeCreator(controlThreadPanel* manager)
+:blockRunner(typeB::NODE_CREATOR, manager)
 {
 }
 

@@ -1,14 +1,11 @@
-#include "Node.h" 
+#include "level.h" 
 class threadNode{
      private:
-        std::vector<Node> nodes;
+        std::vector<level> lvl;
      public:
         threadNode(fsb::path *path);
-        bool createNode(fsb::path *path);
-        bool deleteNode(fsb::path *path);
-        std::vector<Node>& getThread();
-        Node getNode(fsb::path *path);
-        bool haveOnlyOneElement();
+        bool addLvl(fsb::path *path);
+        bool deleteLvl(fsb::path *path);
 };
 
 //этот класс чтобы управлять звеньями

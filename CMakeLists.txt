@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Sortuass)
 
+set(CMAKE_CXX_COMPILER "C:/Program Files/LLVM/bin")
 set(CMAKE_CXX_STANDARD 20)
-set (BOOST_ROOT "Y:/Boost/boost_1_84_0") # Путь к библиотеке Boost
+set (BOOST_ROOT "C:/Users/Korti/Desktop/boost_1_84_0") # Путь к библиотеке Boost
  
 set (CMAKE_CXX_STANDARD 20) 
 set (Boost_NO_SYSTEM_PATHS ON)
