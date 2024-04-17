@@ -1,4 +1,9 @@
 #include "threadNode.h"
+
+class threadNodeEditor{
+
+};
+
 class controlThreadPanel{
         private:
                 std::vector<threadNode> threadNodes; 

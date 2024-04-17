@@ -5,7 +5,7 @@ class threadNode{
      public:
         threadNode(fsb::path *path);
         bool addLvl();
-        bool deleteLvl(fsb::path *path);
+        bool deleteLvl();
 };
 
 //этот класс чтобы управлять звеньями

@@ -17,7 +17,7 @@ cp::controlPanel(){
 }
 
 bool cp::runBlock(blockRunnerType brt){
-    bool report = 0;
+    bool report = false;
     controlThreadPanel* manager;
     manager = cm.getMngrAdrs();
     
