@@ -4,7 +4,7 @@ class threadNode{
         std::vector<level> lvl;
      public:
         threadNode(fsb::path *path);
-        bool addLvl(fsb::path *path);
+        bool addLvl();
         bool deleteLvl(fsb::path *path);
 };
 

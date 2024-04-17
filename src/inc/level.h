@@ -13,7 +13,6 @@ class levelNodeSearcher: public levelNodeUnit{
     public:
         levelNodeSearcher(std::vector<Node>* lvl);
         Node* searchNode(fsb::path* dir);
-        iterator searhIndexNode(fsb::path* dir);
 };
 
 

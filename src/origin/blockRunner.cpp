@@ -19,12 +19,11 @@ blockRunner::blockRunner(blockRunnerType brt, controlThreadPanel* manager){
 
 threadNodeCreator::threadNodeCreator(controlThreadPanel* manager)
 :blockRunner(typeB::THREAD_NODE_CREATOR, manager)
-{
-}
+{}
+
 nodeCreator::nodeCreator(controlThreadPanel* manager)
 :blockRunner(typeB::NODE_CREATOR, manager)
-{
-}
+{}
 
 
 blockRunnerType blockRunner::getType(){
@@ -36,6 +35,10 @@ void blockRunner::runBR(){
 
 void threadNodeCreator:: runBR(){
     manager->createThreadNode(dataB::dataBR.dir);
+}
+
+void nodeCreator::runBR(){
+    
 }
 
 void getNodeDir:: runBR(){
