@@ -8,5 +8,5 @@ class threadNode{
         bool deleteLvl(int number);
         bool getLvl(int number);
 };
-
+// TODO: придумать как сортировать LVL
 //этот класс чтобы управлять звеньями

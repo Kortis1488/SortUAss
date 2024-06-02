@@ -34,6 +34,8 @@ class Node{
         //информация о правилах нода
         bool addRule(std::string dir, std::string ext); //добавить правила сортировки
         void getRule(); //узнать какие правила хранятся в node
-        bool removeRule();//TODO
+        
+        // TODO: добавить возможность удалять правила
+        bool removeRule();
 };
 

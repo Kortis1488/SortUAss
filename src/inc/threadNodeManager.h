@@ -14,5 +14,5 @@ class controlThreadPanel{
                 threadNode& getThreadNodes(fsb::path *path);
                 bool isEmpty();
 };
-
+// TODO: придумать как сортировать нити 
 //этот класс чтобы управлять цепями
